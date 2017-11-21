@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:curso="http://www.estg.ipp.pt/curso">
+     
+
+<xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>
+
+<xs:complexType name="Exame">
+    <xs:sequence>
+        <xs:element name="Unidade" type="curso:unidades"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+</xs:schema>
