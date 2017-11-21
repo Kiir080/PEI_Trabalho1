@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:ipp="http://www.ipp.pt">
+           targetNamespace="http://www.estg.ipp.pt/cursos" 
+           xmlns:c="http://www.estg.ipp.pt/curso">
     
-    <xs:import schemaLocation="curso.xsd" namespace="http://www.ipp.pt"/>    
+    <xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>    
 
     <xs:element name="cursos">
         <xs:complexType>            
             <xs:sequence>
-                <xs:element name="curso" type="ipp:curso" maxOccurs="unbounded"/>              
+                <xs:element name="curso" type="c:curso" maxOccurs="unbounded"/>              
             </xs:sequence>
         </xs:complexType>
     </xs:element>  

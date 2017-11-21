@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema targetNamespace="http://www.ipp.pt"
-           xmlns="http://www.ipp.pt"
+<xs:schema targetNamespace="http://www.estg.ipp.pt/curso"
+           xmlns="http://www.estg.ipp.pt/curso"
            xmlns:xs="http://www.w3.org/2001/XMLSchema">
  
     <xs:complexType name="unidades">
@@ -10,14 +10,14 @@
         <xs:attribute name="ano" type="xs:gYear" use="required"/>
     </xs:complexType>
     
-    <xs:element name="curso">
-        <xs:complexType>
+
+        <xs:complexType name="curso">
             <xs:sequence>
                 <xs:element name="nome" type="xs:string"/>
                 <xs:element name="coordenador" type="xs:string"/>
                 <xs:element name="unidades" type="unidades" />
             </xs:sequence>
         </xs:complexType>
-    </xs:element>
+    
            
 </xs:schema>
