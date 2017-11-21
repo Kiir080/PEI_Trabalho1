@@ -18,6 +18,7 @@
         <xs:element name="Duracao" type="duracaoType"/>
         <xs:element name="Responsavel" type="d:Docente"/>
         <xs:element name="Sala" type="salaType"/>
+        <xs:element name="Tipo" type="exameType"/>
     </xs:sequence>
 </xs:complexType>
 
@@ -33,6 +34,16 @@
         <xs:enumeration value="Informatica"/>
     </xs:restriction>
 </xs:simpleType>
+    
+    
+    <xs:simpleType name="exameType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Teorico"/>
+            <xs:enumeration value="Pratico"/>
+            <xs:enumeration value="Teorico-Pratico"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
 
 
 
