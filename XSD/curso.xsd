@@ -8,7 +8,7 @@
  
     <xs:complexType name="unidades">
         <xs:sequence>
-            <xs:element name="unidade" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+            <xs:element name="unidade" type="unidadeType" minOccurs="1" maxOccurs="unbounded" />
                         
         </xs:sequence>
     </xs:complexType>
