@@ -15,11 +15,17 @@
         <xs:element name="Unidade" type="curso:unidades"/>
         <xs:element name="Hora" type="xs:time"/>
         <xs:element name="Data" type="xs:date"/>
-        <xs:element name="Duracao" type="xs:time"/>
+        <xs:element name="Duracao" type="duracaoType"/>
         <xs:element name="Responsavel" type="d:Docente"/>
         <xs:element name="Sala" type="salaType"/>
     </xs:sequence>
 </xs:complexType>
+
+    <xs:simpleType name="duracaoType">
+        <xs:restriction base="xs:duration">
+            <xs:pattern value="nHnM"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
 
 <xs:simpleType name="salaType">
     <xs:restriction base="xs:string">

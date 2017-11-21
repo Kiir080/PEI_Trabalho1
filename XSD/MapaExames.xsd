@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:E="http://www.estg.ipp.pt/exame">
+
+    <xs:import schemaLocation="Exame.xsd" namespace="http://www.estg.ipp.pt/exame"/>
+
+    <xs:element name="Mapa_de_Exames">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Epoca" type="epocaType"/>
+                <xs:element name="Data_Inicio" type="xs:date"/>
+                <xs:element name="Data_Fim" type="xs:date"/>
+                <xs:element name="Exame" type="E:Exame"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
 
-
-
-
+<xs:simpleType name="epocaType">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="Epoca_Normal"/>
+        <xs:enumeration value="Epoca_Recurso"/>
+        <xs:enumeration value="Epoca_Especial"/>
+    </xs:restriction>
+</xs:simpleType>
 
 </xs:schema>
