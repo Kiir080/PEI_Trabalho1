@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://www.estg.ipp.pt/curso"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns="http://www.estg.ipp.pt/curso"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+           xmlns:d="http://www.estg.ipp.pt/docente">
+    
+    <xs:import schemaLocation="Docente.xsd" namespace="http://www.estg.ipp.pt/docente"/>   
  
     <xs:complexType name="unidades">
         <xs:sequence>
             <xs:element name="unidade" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                        
         </xs:sequence>
-        <xs:attribute name="ano" type="xs:gYear" use="required"/>
     </xs:complexType>
     
 
@@ -18,6 +21,14 @@
                 <xs:element name="unidades" type="unidades" />
             </xs:sequence>
         </xs:complexType>
+    
+    <xs:complexType name="unidadeType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="regente" type="d:Docente"/>
+            <xs:element name="ano" type="xs:int"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
     
            
 </xs:schema>

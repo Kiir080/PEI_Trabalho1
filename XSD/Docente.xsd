@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.estg.ipp.pt/docente" 
+    xmlns="http://www.estg.ipp.pt/docente">  
+            
+<xs:complexType name="Docente">
+    <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="cod" type="codType"/> 
+</xs:complexType>
+
+    <xs:simpleType name="codType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>
