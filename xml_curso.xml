@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cursos escola="ESTG" ano="2017" xmlns:ipp="http://www.ipp.pt"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="curso.xsd">
+
+<mapaexames>    (: não sei o que colocar aqui :)
+    
+<curso codigo="LEI" ano="2017" nivel="Licenciatura">
+    <nome>Licenciatura em Engenharia Informática</nome>
+    <coordenador>Ricardo Santos</coordenador>
+<exames>
+    <unidades>
+        <unidade nome="PEI" regente="Bruno Oliveira" ano="2ºano">
+            <nome>Processamento Estruturado de Informação</nome>
+            <docentes>
+                <nome tipologia="teorica">Bruno Oliveira</nome>
+                <nome tipologia="pratica">Manuel Rodrigues</nome>
+                <nome tipologia="pratica">Oscar Oliviera</nome>
+            </docentes>
+            <hora></hora>
+            <data></data>
+            <duracao></duracao>
+            <sala></sala>
+            <tipo></tipo>
+        </unidade>
+        
+        <unidade nome="MCII" regente="Aldina Correia" ano="2ºano">
+            <nome>Matematica Computacional II</nome>
+            <docentes>
+                <nome tipologia="teorica">Aldina Correia</nome>
+                <nome tipologia="pratica">Eliana Costa e Silva</nome>
+            </docentes>
+            <hora></hora>
+            <data></data>
+            <duracao></duracao>
+            <sala></sala>
+            <tipo></tipo>
+        </unidade>   
+        
+        <unidade nome="ESII" regente="Cristóvão Sousa" ano="2ºano">
+            <nome>Engenharia de Software II</nome>
+            <docentes>
+                <nome tipologia="teorica">Cristóvão Sousa</nome>
+                <nome tipologia="pratica">Miguel Andrade</nome>
+            </docentes>
+            <hora></hora>
+            <data></data>
+            <duracao></duracao>
+            <sala></sala>
+            <tipo></tipo>
+        </unidade>
+        
+        <unidade nome="ED" regente="Ricardo Santos" ano="2ºano">
+            <nome>Estrutura de Dados</nome>
+            <docentes>
+                <nome tipologia="teorica">Ricardo Santos</nome>
+                <nome tipologia="pratica">Davide Carneiro</nome>
+            </docentes>
+            <hora></hora>
+            <data></data>
+            <duracao></duracao>
+            <sala></sala>
+            <tipo></tipo>
+        </unidade>
+        
+    </unidades>
+</exames>
+</curso>    
+</mapaexames>
+</cursos>
