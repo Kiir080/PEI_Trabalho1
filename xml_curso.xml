@@ -3,69 +3,63 @@
 <cursos escola="ESTG" ano="2017" xmlns:ipp="http://www.ipp.pt"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="curso.xsd">
-
-<mapaexames>    (: não sei o que colocar aqui :)
     
 <curso codigo="LEI" ano="2017" nivel="Licenciatura">
     <nome>Licenciatura em Engenharia Informática</nome>
     <coordenador>Ricardo Santos</coordenador>
-<exames>
+
     <unidades>
-        <unidade nome="PEI" regente="Bruno Oliveira" ano="2ºano">
+        <unidade nome="PEI" regente="Bruno Oliveira" ano="2">
             <nome>Processamento Estruturado de Informação</nome>
             <docentes>
-                <nome tipologia="teorica">Bruno Oliveira</nome>
-                <nome tipologia="pratica">Manuel Rodrigues</nome>
-                <nome tipologia="pratica">Oscar Oliviera</nome>
-            </docentes>
-            <hora></hora>
-            <data></data>
-            <duracao></duracao>
-            <sala></sala>
-            <tipo></tipo>
+                <docente cod="1000" tipologia="T">
+                    <name>Bruno Oliveira</name>
+                </docente>
+                <docente cod="1001" tipologia="PL">
+                    <name>Miguel Rodrigues</name>
+                </docente>
+                <docente cod="1002" tipologia="PL">
+                    <name>Oscar Oliveira</name>
+                </docente>
+            </docentes>        
         </unidade>
         
-        <unidade nome="MCII" regente="Aldina Correia" ano="2ºano">
+        <unidade nome="MCII" regente="Aldina Correia" ano="2">
             <nome>Matematica Computacional II</nome>
             <docentes>
-                <nome tipologia="teorica">Aldina Correia</nome>
-                <nome tipologia="pratica">Eliana Costa e Silva</nome>
-            </docentes>
-            <hora></hora>
-            <data></data>
-            <duracao></duracao>
-            <sala></sala>
-            <tipo></tipo>
+                <docente cod="2000" tipologia="T">
+                    <name>Aldina Correia</name> 
+                </docente>
+                <docente cod="2001" tipologia="PL">
+                    <name>Eliana Silva</name>
+                </docente>
+            </docentes>        
         </unidade>   
         
-        <unidade nome="ESII" regente="Cristóvão Sousa" ano="2ºano">
+        <unidade nome="ESII" regente="Cristóvão Sousa" ano="2">
             <nome>Engenharia de Software II</nome>
             <docentes>
-                <nome tipologia="teorica">Cristóvão Sousa</nome>
-                <nome tipologia="pratica">Miguel Andrade</nome>
+                <docente cod="3000" tipologia="T">
+                    <name>Cristovao Sousa</name>
+                </docente>
+                <docente cod="3001" tipologia="PL">
+                    <name>Miguel Andrade</name>
+                </docente>
             </docentes>
-            <hora></hora>
-            <data></data>
-            <duracao></duracao>
-            <sala></sala>
-            <tipo></tipo>
         </unidade>
         
-        <unidade nome="ED" regente="Ricardo Santos" ano="2ºano">
+        <unidade nome="ED" regente="Ricardo Santos" ano="2">
             <nome>Estrutura de Dados</nome>
             <docentes>
-                <nome tipologia="teorica">Ricardo Santos</nome>
-                <nome tipologia="pratica">Davide Carneiro</nome>
+                <docente cod="4000" tipologia="T">
+                    <name>Ricardo Santos</name>
+                </docente>
+                <docente cod="4001" tipologia="PL">
+                    <name>Davide Carneiro</name>
+                </docente>
             </docentes>
-            <hora></hora>
-            <data></data>
-            <duracao></duracao>
-            <sala></sala>
-            <tipo></tipo>
-        </unidade>
-        
+        </unidade>    
     </unidades>
-</exames>
+    
 </curso>    
-</mapaexames>
 </cursos>
