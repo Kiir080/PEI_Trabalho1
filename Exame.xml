@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<e:Exame 
+ xmlns:e="http://www.estg.ipp.pt/exame"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.estg.ipp.pt/exame XSD/Exame.xsd">
+    
+    <Unidade>
+        <name>PEI</name>
+        <regente>
+            <Docente cod="001"> 
+                <name>Bruno Oliveira</name>
+            </Docente>
+        </regente>
+        <ano>2</ano>
+    </Unidade>
+    <Hora>12:30:00</Hora>
+    <Data>2018-01-23</Data>
+    <Duracao>PT2H</Duracao>
+    <Responsavel>
+        <d:Docente cod="001"> 
+            <name>Bruno Oliveira</name>
+        </d:Docente>
+    </Responsavel>
+    <Sala>Informatica</Sala>
+    <Tipo>Pratico</Tipo>
+</e:Exame>
+

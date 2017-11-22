@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    xmlns:E="http://www.estg.ipp.pt/exame">
+    xmlns:e="http://www.estg.ipp.pt/exame"
+    xmlns:c="http://www.estg.ipp.pt/curso">
+    
 
     <xs:import schemaLocation="Exame.xsd" namespace="http://www.estg.ipp.pt/exame"/>
-
+    <xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>
+    
     <xs:element name="Mapa_de_Exames">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="Curso" type="c:curso"/>
                 <xs:element name="Epoca" type="epocaType"/>
                 <xs:element name="Data_Inicio" type="xs:date"/>
                 <xs:element name="Data_Fim" type="xs:date"/>
-                <xs:element name="Exame" type="E:Exame"/>
+                <xs:element name="Exame" type="e:Exame"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

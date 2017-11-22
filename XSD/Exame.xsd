@@ -9,25 +9,22 @@
 <xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>
 <xs:import schemaLocation="Docente.xsd" namespace="http://www.estg.ipp.pt/docente"/>   
     
-
-<xs:complexType name="Exame">
+<xs:element  name="Exame">
+<xs:complexType>    
     <xs:sequence>
-        <xs:element name="Unidade" type="curso:unidades"/>
+        <xs:element name="Unidade" type="curso:unidadeType"/>
         <xs:element name="Hora" type="xs:time"/>
         <xs:element name="Data" type="xs:date"/>
-        <xs:element name="Duracao" type="duracaoType"/>
-        <xs:element name="Responsavel" type="d:Docente"/>
+        <xs:element name="Duracao" type="xs:duration"/>
+        <xs:element name="Responsavel" type="d:docenteType"/>
         <xs:element name="Sala" type="salaType"/>
         <xs:element name="Tipo" type="exameType"/>
     </xs:sequence>
 </xs:complexType>
-
-    <xs:simpleType name="duracaoType">
-        <xs:restriction base="xs:duration">
-            <xs:pattern value="nHnM"></xs:pattern>
-        </xs:restriction>
-    </xs:simpleType>
-
+</xs:element>
+ 
+    
+  
 <xs:simpleType name="salaType">
     <xs:restriction base="xs:string">
         <xs:enumeration value="Normal"/>

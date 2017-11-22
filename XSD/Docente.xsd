@@ -2,13 +2,16 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://www.estg.ipp.pt/docente" 
     xmlns="http://www.estg.ipp.pt/docente">  
-            
-<xs:complexType name="Docente">
+         
+<xs:element name="Docente" type="docenteType"/>         
+    
+    <xs:complexType name="docenteType">
     <xs:sequence>
         <xs:element name="name" type="xs:string"/>
     </xs:sequence>
     <xs:attribute name="cod" type="codType"/> 
-</xs:complexType>
+    </xs:complexType>
+
 
     <xs:simpleType name="codType">
         <xs:restriction base="xs:string">
