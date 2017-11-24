@@ -14,11 +14,26 @@
                 <xs:element name="Epoca" type="epocaType"/>
                 <xs:element name="Data_Inicio" type="xs:date"/>
                 <xs:element name="Data_Fim" type="xs:date"/>
-                <xs:element name="Exame" type="e:Exame"/>
+                <xs:element name="Semestre" type="semestreType"/>
+                <xs:element name="Exames">
+                    <xs:complexType>
+                        <xs:sequence>
+                    <xs:element name="Exame" type="e:exameType"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
+
+    <xs:simpleType name="semestreType">
+        <xs:restriction base="xs:int">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
 
 <xs:simpleType name="epocaType">
     <xs:restriction base="xs:string">

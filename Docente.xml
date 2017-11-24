@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<d:Docente cod="001" 
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:d="http://www.estg.ipp.pt/docente"
- xsi:schemaLocation="http://www.estg.ipp.pt/docente XSD/Docente.xsd">
-    <name>Bruno Oliveira</name>
-</d:Docente>

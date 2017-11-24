@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Mapa_de_Exames xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="XSD/MapaExames.xsd">
+    
+    <Curso>
+        <nome>LEI</nome>
+        <coordenador>Ricardo</coordenador>
+        <unidades>         
+            <unidade>
+                <name>PEI</name>
+                <regente cod="bmo">
+                    <name>Bruno Oliveira</name>
+                </regente>
+                <ano>2</ano>
+            </unidade>    
+        </unidades>
+    </Curso>
+    <Epoca>Epoca_Normal</Epoca>
+    <Data_Inicio>2018-01-20</Data_Inicio>
+    <Data_Fim>2018-01-27</Data_Fim>
+    <Semestre>1</Semestre>
+    <Exames>
+        <Exame Tipologia="T">    
+            <Unidade>
+                <name>PEI</name>
+                <regente cod="001">
+                    <name>Bruno Oliveira</name>
+                </regente>
+                <ano>2</ano>
+            </Unidade>  
+            <Hora>12:30:00</Hora>
+            <Data>2018-01-23</Data>
+            <Duracao>PT2H</Duracao>
+            <Responsavel cod="bmo"> 
+                <name>Bruno Oliveira</name>
+            </Responsavel>
+            <Sala>Informatica</Sala>
+        </Exame>
+    </Exames>
+</Mapa_de_Exames>
+
