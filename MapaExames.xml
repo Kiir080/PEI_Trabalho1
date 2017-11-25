@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?xml-stylesheet type="text/xsl" href="Mapa_de_Exames.xsl"?>
 <Mapa_de_Exames xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="XSD/MapaExames.xsd">
+    
+    
     
     <Curso>
         <nome>LEI</nome>
@@ -30,7 +32,7 @@
                 <ano>2</ano>
             </Unidade>  
             <Hora>12:30:00</Hora>
-            <Data>2018-01-23</Data>
+            <Data>2018-01-20</Data>
             <Duracao>PT2H</Duracao>
             <Responsavel cod="bmo"> 
                 <name>Bruno Oliveira</name>
