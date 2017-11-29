@@ -11,6 +11,7 @@
     <xs:complexType name="unidades">
         <xs:sequence>
             <xs:element name="unidade" type="unidadeType" minOccurs="1" maxOccurs="unbounded"/>  
+            
         </xs:sequence>
     </xs:complexType>
     
@@ -63,6 +64,7 @@
             <xs:element name="exames" type="exameType"/>
             <xs:element name="Area_cientifica" type="areacientificaType"/>
         </xs:sequence>
+        <xs:attribute name="codigo" type="d:codType"></xs:attribute>
     </xs:complexType>
     
   

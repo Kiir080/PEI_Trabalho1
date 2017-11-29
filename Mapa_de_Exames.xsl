@@ -13,6 +13,7 @@
             <body>
                 <h2 style="text-align: center">
                     <b>
+                        <xsl:value-of select="Mapa_de_Exames/cursos/curso/@nivel"/>&#160;
                         <xsl:value-of select="Mapa_de_Exames/cursos/curso/name"/>
                     </b>
                 </h2>

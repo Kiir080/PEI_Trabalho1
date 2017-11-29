@@ -36,8 +36,8 @@
             <name>Engenharia Informatica</name>
             <coordenador>Ricardo</coordenador>
             <unidades>
-                <unidade>
-                    <nome>PEI</nome>
+                <unidade codigo="PEI">
+                    <nome>Processamento Estruturado de Informacao</nome>
                     <regente cod="bmo">
                         <nome>Bruno Oliveira</nome>
                     </regente>
@@ -88,8 +88,8 @@
                     </exames>
                     <Area_cientifica>Informatica</Area_cientifica>
                 </unidade> 
-                <unidade>
-                    <nome>LP</nome>
+                <unidade codigo="LP">
+                    <nome>Laboratorios de Programacao</nome>
                     <regente cod="dc">
                         <nome>Davide Carneiro</nome>
                     </regente>
@@ -156,8 +156,8 @@
                     </exames>
                     <Area_cientifica>Informatica</Area_cientifica>
                 </unidade>
-                <unidade>
-                    <nome>SO</nome>
+                <unidade codigo="SO">
+                    <nome>Sistemas Operativos</nome>
                     <regente cod="apinto">
                         <nome>Antonio Pinto</nome>
                     </regente>
