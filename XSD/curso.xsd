@@ -1,36 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://www.estg.ipp.pt/curso"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns="http://www.estg.ipp.pt/curso"
-           xmlns:d="http://www.estg.ipp.pt/docente">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://www.estg.ipp.pt/curso"
+    xmlns:e="http://www.estg.ipp.pt/exame"
+    xmlns:d="http://www.estg.ipp.pt/docente">
     
-    <xs:import schemaLocation="Docente.xsd" namespace="http://www.estg.ipp.pt/docente"/>   
-
-
-
-    <xs:complexType name="curso">
-        <xs:sequence>
-            <xs:element name="nome" type="xs:string"/>
-            <xs:element name="coordenador" type="xs:string"/>
-            <xs:element name="unidades" type="unidades" />
-        </xs:sequence>
-    </xs:complexType>
+    <xs:import schemaLocation="Docente.xsd" namespace="http://www.estg.ipp.pt/docente"/> 
+    <xs:import schemaLocation="Exame.xsd" namespace="http://www.estg.ipp.pt/exame"/>
     
-
     <xs:complexType name="unidades">
         <xs:sequence>
-            <xs:element name="unidade" type="unidadeType" minOccurs="1" maxOccurs="unbounded" />
-                        
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="unidadeType">
-        <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="regente" type="d:docenteType"/>
-            <xs:element name="ano" type="xs:int"/>
+            <xs:element name="unidade" type="unidadeType" minOccurs="1" maxOccurs="unbounded"/>  
         </xs:sequence>
     </xs:complexType>
     
-           
+    <xs:complexType name="docentesType">
+        <xs:sequence>
+            <xs:element name="docente" type="d:Docente" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="exameType">
+        <xs:sequence>
+            <xs:element name="exame" type="e:exameType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:simpleType name="nivelType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CTeSP"/>
+            <xs:enumeration value="Licenciatura"/>
+            <xs:enumeration value="Mestrados"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="anoType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][0-9][0-9][0-9]/[0-9][0-9][0-9][0-9]"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+    <xs:complexType name="curso">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="coordenador" type="xs:string"/>
+            <xs:element name="unidades" type="unidades"/>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="d:codType"/>
+        <xs:attribute name="nivel" type="nivelType"/>
+        <xs:attribute name="ano" type="anoType"/>
+    </xs:complexType>
+    
+    <xs:complexType name="unidadeType">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="regente" type="d:Docente"/>
+            <xs:element name="docentes" type="docentesType"/>
+            <xs:element name="ano" type="xs:int"/>
+            <xs:element name="semestre" type="semestreType"/>
+            <xs:element name="exames" type="exameType"/>
+            <xs:element name="Area_cientifica" type="areacientificaType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+  
+    <xs:simpleType name="semestreType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="N/A"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+  
+    <xs:simpleType name="areacientificaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Informatica"/>
+            <xs:enumeration value="Ciencias"/>
+            <xs:enumeration value="Matematica"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
 </xs:schema>

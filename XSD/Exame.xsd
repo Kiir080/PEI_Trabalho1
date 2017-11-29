@@ -7,32 +7,37 @@
      
 
 <xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>
-<xs:import schemaLocation="Docente.xsd" namespace="http://www.estg.ipp.pt/docente"/>   
+<xs:import schemaLocation="Docente.xsd" namespace="http://www.estg.ipp.pt/docente"/> 
     
-<xs:element  name="Exame" type="exameType"/>
-<xs:complexType name="exameType">    
-    <xs:sequence>
-        <xs:element name="Unidade" type="curso:unidadeType"/>
-        <xs:element name="Hora" type="xs:time"/>
-        <xs:element name="Data" type="xs:date"/>
-        <xs:element name="Duracao" type="xs:duration"/>
-        <xs:element name="Responsavel" type="d:docenteType"/>
-        <xs:element name="Sala" type="salaType"/>
-     </xs:sequence>
-    <xs:attribute name="Tipologia" type="avaliacaoType"/>
-</xs:complexType>
-
- 
-    
+    <xs:element  name="exame" type="exameType"/>
+        
+    <xs:complexType name="exameType">    
+        <xs:sequence>
+            <xs:element name="epoca" type="epocaType"/>
+            <xs:element name="Hora" type="xs:time"/>
+            <xs:element name="Data" type="xs:date"/>
+            <xs:element name="Duracao" type="xs:duration"/>
+            <xs:element name="Responsavel" type="d:Docente"/>
+            <xs:element name="Sala" type="salaType"/>
+         </xs:sequence>
+        <xs:attribute name="Tipologia" type="avaliacaoType"/>
+    </xs:complexType>   
   
-<xs:simpleType name="salaType">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Normal"/>
-        <xs:enumeration value="Informatica"/>
-    </xs:restriction>
-</xs:simpleType>
+    <xs:simpleType name="epocaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Epoca_Normal"/>
+            <xs:enumeration value="Epoca_Recurso"/>
+            <xs:enumeration value="Epoca_Especial"/>
+        </xs:restriction>
+    </xs:simpleType>
     
-    
+    <xs:simpleType name="salaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Normal"/>
+            <xs:enumeration value="Informatica"/>
+        </xs:restriction>
+    </xs:simpleType>
+        
     <xs:simpleType name="avaliacaoType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="T"/>
@@ -41,9 +46,5 @@
             <xs:enumeration value="OT"/>
         </xs:restriction>
     </xs:simpleType>
-    
-
-
-
 
 </xs:schema>

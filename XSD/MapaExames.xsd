@@ -4,43 +4,36 @@
     xmlns:c="http://www.estg.ipp.pt/curso">
     
 
-    <xs:import schemaLocation="Exame.xsd" namespace="http://www.estg.ipp.pt/exame"/>
     <xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>
-    
+    <xs:import schemaLocation="Exame.xsd" namespace="http://www.estg.ipp.pt/exame"/>
     <xs:element name="Mapa_de_Exames">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Curso" type="c:curso"/>
-                <xs:element name="Epoca" type="epocaType"/>
-                <xs:element name="Data_Inicio" type="xs:date"/>
-                <xs:element name="Data_Fim" type="xs:date"/>
-                <xs:element name="Semestre" type="semestreType"/>
-                <xs:element name="Exames">
-                    <xs:complexType>
-                        <xs:sequence>
-                    <xs:element name="Exame" type="e:exameType"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element name="calendario" type="CalendarioType"/>
+                <xs:element name="cursos" type="cursosType"/> 
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-
-    <xs:simpleType name="semestreType">
-        <xs:restriction base="xs:int">
-            <xs:enumeration value="1"/>
-            <xs:enumeration value="2"/>
-        </xs:restriction>
-    </xs:simpleType>
     
+    <xs:complexType name="cursosType">            
+        <xs:sequence>
+            <xs:element name="curso" type="c:curso" maxOccurs="unbounded"/>              
+        </xs:sequence>
+    </xs:complexType>
 
-<xs:simpleType name="epocaType">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="Epoca_Normal"/>
-        <xs:enumeration value="Epoca_Recurso"/>
-        <xs:enumeration value="Epoca_Especial"/>
-    </xs:restriction>
-</xs:simpleType>
+    <xs:complexType name="CalendarioType">
+        <xs:sequence>
+            <xs:element name="epoca" type="epocasType" maxOccurs="5" />
+        </xs:sequence>    
+    </xs:complexType>
 
+   
+    <xs:complexType name="epocasType">
+        <xs:sequence>
+            <xs:element name="semestre" type="c:semestreType"/>
+            <xs:element name="nome" type="e:epocaType"/>
+            <xs:element name="dataInicio" type="xs:date"/>
+            <xs:element name="dataFim" type="xs:date"/>            
+        </xs:sequence>
+    </xs:complexType>
 </xs:schema>

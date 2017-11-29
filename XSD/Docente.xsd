@@ -2,23 +2,29 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://www.estg.ipp.pt/docente" 
     xmlns="http://www.estg.ipp.pt/docente">  
-         
-<xs:element name="Docente" type="docenteType"/>         
-    
-    <xs:complexType name="docenteType">
+            
+<xs:complexType name="Docente">
     <xs:sequence>
-        <xs:element name="name" type="xs:string"/>
+        <xs:element name="nome" type="xs:string"/>
     </xs:sequence>
-    <xs:attribute name="cod" type="codType"/> 
-    </xs:complexType>
-
+    <xs:attribute name="cod" type="codType"/>
+    <xs:attribute name="tipologia" type="tipologiaType"/>
+</xs:complexType>
 
     <xs:simpleType name="codType">
         <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
-            <xs:maxLength value="4"/>
+            <xs:maxLength value="10"/>
         </xs:restriction>
     </xs:simpleType>
-
+    
+    <xs:simpleType name="tipologiaType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="T"/>
+            <xs:enumeration value="TP"/>
+            <xs:enumeration value="PL"/>
+            <xs:enumeration value="OT"/>
+        </xs:restriction>
+    </xs:simpleType>
 
 </xs:schema>

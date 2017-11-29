@@ -1,44 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="Mapa_de_Exames.xsl"?>
 <Mapa_de_Exames xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:noNamespaceSchemaLocation="XSD/MapaExames.xsd">
+    xsi:noNamespaceSchemaLocation="XSD/MapaExames.xsd">
+
+    <calendario>
+        
+        <epoca>
+            <semestre>1</semestre>
+            <nome>Epoca_Normal</nome>
+            <dataInicio>2018-01-15</dataInicio>
+            <dataFim>2018-02-03</dataFim>
+        </epoca>
+        <epoca>
+            <semestre>1</semestre>
+            <nome>Epoca_Recurso</nome>
+            <dataInicio>2018-02-05</dataInicio>
+            <dataFim>2018-02-24</dataFim>
+        </epoca>
+        <epoca>
+            <semestre>2</semestre>
+            <nome>Epoca_Normal</nome>
+            <dataInicio>2018-05-15</dataInicio>
+            <dataFim>2018-06-03</dataFim>
+        </epoca>
+        <epoca>
+            <semestre>2</semestre>
+            <nome>Epoca_Recurso</nome>
+            <dataInicio>2018-06-15</dataInicio>
+            <dataFim>2018-07-03</dataFim>
+        </epoca> 
+    </calendario>
     
-    
-    
-    <Curso>
-        <nome>LEI</nome>
-        <coordenador>Ricardo</coordenador>
-        <unidades>         
-            <unidade>
-                <name>PEI</name>
-                <regente cod="bmo">
-                    <name>Bruno Oliveira</name>
-                </regente>
-                <ano>2</ano>
-            </unidade>    
-        </unidades>
-    </Curso>
-    <Epoca>Epoca_Normal</Epoca>
-    <Data_Inicio>2018-01-20</Data_Inicio>
-    <Data_Fim>2018-01-27</Data_Fim>
-    <Semestre>1</Semestre>
-    <Exames>
-        <Exame Tipologia="T">    
-            <Unidade>
-                <name>PEI</name>
-                <regente cod="001">
-                    <name>Bruno Oliveira</name>
-                </regente>
-                <ano>2</ano>
-            </Unidade>  
-            <Hora>12:30:00</Hora>
-            <Data>2018-01-20</Data>
-            <Duracao>PT2H</Duracao>
-            <Responsavel cod="bmo"> 
-                <name>Bruno Oliveira</name>
-            </Responsavel>
-            <Sala>Informatica</Sala>
-        </Exame>
-    </Exames>
+    <cursos>
+        <curso codigo="LEI" nivel="Licenciatura" ano="2017/2018">
+            <name>Engenharia Informatica</name>
+            <coordenador>Ricardo</coordenador>
+            <unidades>
+                <unidade>
+                    <nome>PEI</nome>
+                    <regente cod="bmo">
+                        <nome>Bruno Oliveira</nome>
+                    </regente>
+                    <docentes>
+                        <docente cod="bmo" tipologia="T">
+                            <nome>Bruno Oliveira</nome>
+                        </docente>
+                        <docente cod="mfr" tipologia="PL">
+                            <nome>Manuel Rodrigues</nome>
+                        </docente>
+                        <docente cod="oao" tipologia="PL">
+                            <nome>Oscar Oliveira</nome>
+                        </docente>
+                    </docentes>
+                    <ano>2</ano>
+                    <semestre>1</semestre>
+                    <exames>
+                        <exame>
+                            <epoca>Epoca_Normal</epoca>
+                            <Hora>12:30:00</Hora>
+                            <Data>2018-01-23</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="bmo"> 
+                                <nome>Bruno Oliveira</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>  
+                        </exame>
+                        <exame>
+                            <epoca>Epoca_Recurso</epoca>
+                            <Hora>10:00:00</Hora>
+                            <Data>2018-02-10</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="bmo"> 
+                                <nome>Bruno Oliveira</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>  
+                        </exame>
+                        <exame>
+                            <epoca>Epoca_Especial</epoca>
+                            <Hora>11:00:00</Hora>
+                            <Data>2018-09-26</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="bmo"> 
+                                <nome>Bruno Oliveira</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>  
+                        </exame>
+                    </exames>
+                    <Area_cientifica>Informatica</Area_cientifica>
+                </unidade> 
+                <unidade>
+                    <nome>LP</nome>
+                    <regente cod="dc">
+                        <nome>Davide Carneiro</nome>
+                    </regente>
+                    <docentes>
+                        <docente cod="dc" tipologia="TP">
+                            <nome>Davide Carneiro</nome>
+                        </docente>
+                        <docente cod="dad" tipologia="TP">
+                            <nome>Dalila Durães</nome>
+                        </docente>
+                        <docente cod="mfg" tipologia="TP">
+                            <nome>Marco Gomes</nome>
+                        </docente>
+                        <docente cod="mfr" tipologia="TP">
+                            <nome>Manuel Rodrigues</nome>
+                        </docente>
+                    </docentes>
+                    <ano>1</ano>
+                    <semestre>1</semestre>
+                    <exames>
+                        <exame>
+                            <epoca>Epoca_Normal</epoca>
+                            <Hora>14:30:00</Hora>
+                            <Data>2018-01-26</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="dc">
+                                <nome>Davide Carneiro</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>
+                            
+                        </exame>
+                        <exame>
+                            <epoca>Epoca_Normal</epoca>
+                            <Hora>12:30:00</Hora>
+                            <Data>2018-01-26</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="dc">
+                                <nome>Davide Carneiro</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>
+                            
+                        </exame>
+                        <exame>
+                            <epoca>Epoca_Recurso</epoca>
+                            <Hora>10:00:00</Hora>
+                            <Data>2018-02-10</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="dc">
+                                <nome>Davide Carneiro</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>
+                            
+                        </exame>
+                        <exame>
+                            <epoca>Epoca_Especial</epoca>
+                            <Hora>11:00:00</Hora>
+                            <Data>2018-09-26</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="dc">
+                                <nome>Davide Carneiro</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>
+                        </exame>
+                    </exames>
+                    <Area_cientifica>Informatica</Area_cientifica>
+                </unidade>
+                <unidade>
+                    <nome>SO</nome>
+                    <regente cod="apinto">
+                        <nome>Antonio Pinto</nome>
+                    </regente>
+                    <docentes>
+                        <docente cod="apinto" tipologia="T">
+                            <nome>Antonio Pinto</nome>
+                        </docente>
+                        <docente cod="ams" tipologia="PL">
+                            <nome>Altino Sampaio</nome>
+                        </docente>
+                    </docentes>
+                    <ano>2</ano>
+                    <semestre>1</semestre>
+                    <exames>
+                        <exame>
+                            <epoca>Epoca_Normal</epoca>
+                            <Hora>12:30:00</Hora>
+                            <Data>2018-01-20</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="apinto">
+                                <nome>Antonio Pinto</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>
+                            
+                        </exame>
+                        <exame>
+                            <epoca>Epoca_Recurso</epoca>
+                            <Hora>10:00:00</Hora>
+                            <Data>2018-02-10</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="apinto">
+                                <nome>Antonio Pinto</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>
+                            
+                        </exame>
+                        <exame>
+                            <epoca>Epoca_Especial</epoca>
+                            <Hora>11:00:00</Hora>
+                            <Data>2018-09-26</Data>
+                            <Duracao>PT2H</Duracao>
+                            <Responsavel cod="apinto">
+                                <nome>Antonio Pinto</nome>
+                            </Responsavel>
+                            <Sala>Informatica</Sala>
+                            
+                        </exame>
+                    </exames>
+                    <Area_cientifica>Informatica</Area_cientifica>
+                </unidade>
+            </unidades>
+        </curso>
+    </cursos>
 </Mapa_de_Exames>
+
 
