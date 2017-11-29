@@ -20,7 +20,7 @@
             <xs:element name="Responsavel" type="d:Docente"/>
             <xs:element name="Sala" type="salaType"/>
          </xs:sequence>
-        <xs:attribute name="Tipologia" type="avaliacaoType"/>
+        <xs:attribute name="Tipologia" type="avaliacaoType" use="required"/>
     </xs:complexType>   
   
     <xs:simpleType name="epocaType">

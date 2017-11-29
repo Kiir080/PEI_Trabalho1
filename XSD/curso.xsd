@@ -11,7 +11,6 @@
     <xs:complexType name="unidades">
         <xs:sequence>
             <xs:element name="unidade" type="unidadeType" minOccurs="1" maxOccurs="unbounded"/>  
-            
         </xs:sequence>
     </xs:complexType>
     
@@ -49,9 +48,9 @@
             <xs:element name="coordenador" type="xs:string"/>
             <xs:element name="unidades" type="unidades"/>
         </xs:sequence>
-        <xs:attribute name="codigo" type="d:codType"/>
-        <xs:attribute name="nivel" type="nivelType"/>
-        <xs:attribute name="ano" type="anoType"/>
+        <xs:attribute name="codigo" type="d:codType" use="required"/>
+        <xs:attribute name="nivel" type="nivelType" use="required"/>
+        <xs:attribute name="ano" type="anoType" use="required"/>
     </xs:complexType>
     
     <xs:complexType name="unidadeType">
@@ -64,7 +63,7 @@
             <xs:element name="exames" type="exameType"/>
             <xs:element name="Area_cientifica" type="areacientificaType"/>
         </xs:sequence>
-        <xs:attribute name="codigo" type="d:codType"></xs:attribute>
+        <xs:attribute name="codigo" type="d:codType" use="required"/>
     </xs:complexType>
     
   

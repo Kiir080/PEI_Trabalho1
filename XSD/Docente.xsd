@@ -7,8 +7,8 @@
     <xs:sequence>
         <xs:element name="nome" type="xs:string"/>
     </xs:sequence>
-    <xs:attribute name="cod" type="codType"/>
-    <xs:attribute name="tipologia" type="tipologiaType"/>
+    <xs:attribute name="cod" type="codType" use="required"/>
+    <xs:attribute name="tipologia" type="tipologiaType" use="required"/>
 </xs:complexType>
 
     <xs:simpleType name="codType">

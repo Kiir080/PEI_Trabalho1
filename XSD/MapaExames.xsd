@@ -6,6 +6,7 @@
 
     <xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>
     <xs:import schemaLocation="Exame.xsd" namespace="http://www.estg.ipp.pt/exame"/>
+    
     <xs:element name="Mapa_de_Exames">
         <xs:complexType>
             <xs:sequence>
