@@ -28,7 +28,13 @@
             <nome>Epoca_Recurso</nome>
             <dataInicio>2018-06-15</dataInicio>
             <dataFim>2018-07-03</dataFim>
-        </epoca> 
+        </epoca>
+        <epoca>
+            <semestre>N/A</semestre>
+            <nome>Epoca_Especial</nome>
+            <dataInicio>2018-09-15</dataInicio>
+            <dataFim>2018-10-03</dataFim>
+        </epoca>
     </calendario>
     
     <cursos>
