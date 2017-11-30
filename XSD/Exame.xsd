@@ -9,8 +9,8 @@
 <xs:import schemaLocation="curso.xsd" namespace="http://www.estg.ipp.pt/curso"/>
 <xs:import schemaLocation="Docente.xsd" namespace="http://www.estg.ipp.pt/docente"/> 
     
-    <xs:element  name="exame" type="exameType"/>
-        
+    <xs:element  name="exame" type="exameType"/>    
+    
     <xs:complexType name="exameType">    
         <xs:sequence>
             <xs:element name="epoca" type="epocaType"/>

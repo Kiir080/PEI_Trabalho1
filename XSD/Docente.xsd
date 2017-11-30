@@ -3,13 +3,13 @@
     targetNamespace="http://www.estg.ipp.pt/docente" 
     xmlns="http://www.estg.ipp.pt/docente">  
             
-<xs:complexType name="Docente">
-    <xs:sequence>
-        <xs:element name="nome" type="xs:string"/>
-    </xs:sequence>
-    <xs:attribute name="cod" type="codType" use="required"/>
-    <xs:attribute name="tipologia" type="tipologiaType"/>
-</xs:complexType>
+    <xs:complexType name="Docente">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="cod" type="codType" use="required"/>
+        <xs:attribute name="tipologia" type="tipologiaType"/>
+    </xs:complexType>
 
     <xs:simpleType name="codType">
         <xs:restriction base="xs:string">

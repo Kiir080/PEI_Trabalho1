@@ -32,7 +32,7 @@
     </calendario>
     
     <cursos>
-        <curso codigo="LEI" nivel="Licenciatura" ano="2017/2018">
+        <curso ano="2017/2018" codigo="LEI" nivel="Licenciatura" >
             <name>Engenharia Informatica</name>
             <coordenador>Ricardo</coordenador>
             <unidades>
