@@ -7,7 +7,8 @@
       <link rel="stylesheet" href="docHtml.css" type="text/css" /><script type="text/javascript">
          <!--
         
-        
+        var parametersBoxes= new Array('prs_T_tableTemplateS_Mapa_de_Exames.xsl');
+
         
         var usedByBoxes= new Array('uB_T_RowTemplateS_Mapa_de_Exames.xsl', 
 				'uB_T_DataTemplateS_Mapa_de_Exames.xsl', 
@@ -16,7 +17,11 @@
 				'uB_T_HoraTemplateS_Mapa_de_Exames.xsl', 
 				'uB_T_NomeUCTemplateS_Mapa_de_Exames.xsl', 
 				'uB_T_AnoTemplateS_Mapa_de_Exames.xsl', 
-				'uB_V_EpocaS_Mapa_de_Exames.xsl');
+				'uB_T_tableTemplateS_Mapa_de_Exames.xsl', 
+				'uB_V_SemestreS_Mapa_de_Exames.xsl', 
+				'uB_V_Epoca_normalS_Mapa_de_Exames.xsl', 
+				'uB_V_Epoca_recursoS_Mapa_de_Exames.xsl', 
+				'uB_V_Epoca_especialS_Mapa_de_Exames.xsl');
 
         
         var sourceBoxes= new Array('src_M_S_Mapa_de_Exames.xsl', 
@@ -27,12 +32,19 @@
 				'src_T_HoraTemplateS_Mapa_de_Exames.xsl', 
 				'src_T_NomeUCTemplateS_Mapa_de_Exames.xsl', 
 				'src_T_AnoTemplateS_Mapa_de_Exames.xsl', 
-				'src_V_EpocaS_Mapa_de_Exames.xsl');
+				'src_T_tableTemplateS_Mapa_de_Exames.xsl', 
+				'src_V_SemestreS_Mapa_de_Exames.xsl', 
+				'src_V_Epoca_normalS_Mapa_de_Exames.xsl', 
+				'src_V_Epoca_recursoS_Mapa_de_Exames.xsl', 
+				'src_V_Epoca_especialS_Mapa_de_Exames.xsl');
 
         
         
         var referencesBoxes= new Array('refs_M_S_Mapa_de_Exames.xsl', 
-				'refs_T_RowTemplateS_Mapa_de_Exames.xsl');
+				'refs_T_RowTemplateS_Mapa_de_Exames.xsl', 
+				'refs_T_tableTemplateS_Mapa_de_Exames.xsl', 
+				'refs_V_Epoca_normalS_Mapa_de_Exames.xsl', 
+				'refs_V_Epoca_recursoS_Mapa_de_Exames.xsl');
 
         
         
@@ -333,6 +345,9 @@
                   <h3>Showing:</h3>
                   <table>
                      <tr>
+                        <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, parametersBoxes);" class="control" /></span><span class="globalControlName">Parameters </span></td>
+                     </tr>
+                     <tr>
                         <td><span><input type="checkbox" value="-" checked="checked" onclick="switchStateForAll(this, usedByBoxes);" class="control" /></span><span class="globalControlName">Used by </span></td>
                      </tr>
                      <tr>
@@ -413,18 +428,20 @@
                            <div id="refs_M_S_Mapa_de_Exames.xsl" style="display:block">
                               <table class="uBT">
                                  <tr>
-                                    <td class="fCol">Variable</td>
+                                    <td class="fCol">Template</td>
                                     <td>
                                        <div class="listGrouping">
-                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_EpocaS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Epoca</a></div>
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#T_tableTemplateS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="nRf">tableTemplate</span></a></div>
                                        </div>
                                     </td>
                                  </tr>
                                  <tr>
-                                    <td class="fCol">Template</td>
+                                    <td class="fCol">Variables</td>
                                     <td>
                                        <div class="listGrouping">
-                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#T_RowTemplateS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="nRf">RowTemplate</span></a></div>
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_Epoca_especialS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Epoca_especial</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_Epoca_normalS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Epoca_normal</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_Epoca_recursoS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Epoca_recurso</a></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -450,38 +467,22 @@
     </span><span class="tEl">&lt;head</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tEl">&lt;title</span><span class="tEl">&gt;</span><span class="tT">Mapa de Exames</span><span class="tEl">&lt;/title&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/head&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;body</span><span class="tEl">&gt;</span><span class="tT">
-                (: Isto é o código para o título :)
-                </span><span class="tEl">&lt;h2</span><span class="tAN"> style=</span><span class="tAV">"text-align: center"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;body</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;h2</span><span class="tAN"> style=</span><span class="tAV">"text-align: center"</span><span class="tEl">&gt;</span><span class="tI">
         </span><span class="tEl">&lt;b</span><span class="tEl">&gt;</span><span class="tI">
           </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/cursos/curso/@nivel"</span><span class="tXSLEl">/&gt;</span><span class="tT"> 
                         </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/cursos/curso/name"</span><span class="tXSLEl">/&gt;</span><span class="tI">
         </span><span class="tEl">&lt;/b&gt;</span><span class="tI">
       </span><span class="tEl">&lt;/h2&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$Epoca/nome"</span><span class="tXSLEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$Epoca/dataInicio"</span><span class="tXSLEl">/&gt;</span><span class="tT">
-                    a
-                    </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$Epoca/dataFim"</span><span class="tXSLEl">/&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;table</span><span class="tAN"> border=</span><span class="tAV">"1"</span><span class="tEl">&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;tr</span><span class="tEl">&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Dia</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Ano</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Unidade Curricular</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Hora</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Sala</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Responsavel</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
-        </span><span class="tEl">&lt;/tr&gt;</span><span class="tI">
-        </span><span class="tXSLEl">&lt;xsl:for-each-group</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/cursos/curso/unidades/unidade[semestre=$Epoca/semestre]/exames/exame[epoca=$Epoca/nome]"</span><span class="tAN"> group-by=</span><span class="tAV">"Data"</span><span class="tXSLEl">&gt;</span><span class="tI">
-          </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Data"</span><span class="tXSLEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;tr</span><span class="tEl">&gt;</span><span class="tI">
-            </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"RowTemplate"</span><span class="tXSLEl">/&gt;</span><span class="tI">
-          </span><span class="tEl">&lt;/tr&gt;</span><span class="tI">
-        </span><span class="tXSLEl">&lt;/xsl:for-each-group&gt;</span><span class="tI">
-      </span><span class="tEl">&lt;/table&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"tableTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"Epoca"</span><span class="tAN"> select=</span><span class="tAV">"$Epoca_normal"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:call-template&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"tableTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"Epoca"</span><span class="tAN"> select=</span><span class="tAV">"$Epoca_recurso"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:call-template&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"tableTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:with-param</span><span class="tAN"> name=</span><span class="tAV">"Epoca"</span><span class="tAN"> select=</span><span class="tAV">"$Epoca_especial"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:call-template&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/body&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/html&gt;</span><span class="tI">
 </span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
@@ -529,7 +530,7 @@
                                     <td class="fCol">Template</td>
                                     <td>
                                        <div class="listGrouping">
-                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#M_S_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="mRf">/</span></a></div>
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#T_tableTemplateS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="nRf">tableTemplate</span></a></div>
                                        </div>
                                     </td>
                                  </tr>
@@ -736,6 +737,7 @@
                                     <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"ResponsavelTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
   </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"current-group()"</span><span class="tXSLEl">&gt;</span><span class="tI">
     </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Hora"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"ancestor::node()/ancestor::node()/ano"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"Responsavel/nome"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
@@ -809,6 +811,7 @@
                                     <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"SalaTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
   </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"current-group()"</span><span class="tXSLEl">&gt;</span><span class="tI">
     </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Hora"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"ancestor::node()/ancestor::node()/ano"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"Sala"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
@@ -882,6 +885,7 @@
                                     <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"HoraTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
   </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"current-group()"</span><span class="tXSLEl">&gt;</span><span class="tI">
     </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Hora"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"ancestor::node()/ancestor::node()/ano"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"Hora"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
@@ -955,6 +959,7 @@
                                     <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"NomeUCTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
   </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"current-group()"</span><span class="tXSLEl">&gt;</span><span class="tI">
     </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Hora"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"ancestor::node()/ancestor::node()/ano"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"ancestor::node()/nome"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
@@ -1028,6 +1033,7 @@
                                     <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"AnoTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
   </span><span class="tXSLEl">&lt;xsl:for-each</span><span class="tAN"> select=</span><span class="tAV">"current-group()"</span><span class="tXSLEl">&gt;</span><span class="tI">
     </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Hora"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"ancestor::node()/ancestor::node()/ano"</span><span class="tXSLEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
       </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"ancestor::node()/ancestor::node()/ano"</span><span class="tXSLEl">/&gt;</span><span class="tT">
                 º
@@ -1049,8 +1055,154 @@
             <td class="rt_lB"></td>
             <td class="rt_cBR"></td>
          </tr>
-      </table><a id="V_EpocaS_Mapa_de_Exames.xsl"></a><div class="cmpT">Variable
-         <span class="qname">Epoca</span></div>
+      </table><a id="T_tableTemplateS_Mapa_de_Exames.xsl"></a><div class="cmpT">Template
+         <span class="titleTemplateName">tableTemplate</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_T_tableTemplateS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_T_tableTemplateS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_T_tableTemplateS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#M_S_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_T_tableTemplateS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_T_tableTemplateS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_T_tableTemplateS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#T_RowTemplateS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="nRf">RowTemplate</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Parameters</div>
+                           <div class="flR"><input id="bt_prs_T_tableTemplateS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('prs_T_tableTemplateS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="prs_T_tableTemplateS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="attsT">
+                                 <thead>
+                                    <tr>
+                                       <th>QName</th>
+                                       <th>Namespace</th>
+                                    </tr>
+                                 </thead>
+                                 <tr>
+                                    <td class="fCol">Epoca</td>
+                                    <td>No namespace</td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Import precedence</td>
+                        <td>0</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_T_tableTemplateS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_T_tableTemplateS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_T_tableTemplateS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:template</span><span class="tAN"> name=</span><span class="tAV">"tableTemplate"</span><span class="tXSLEl">&gt;</span><span class="tI">
+  </span><span class="tXSLEl">&lt;xsl:param</span><span class="tAN"> name=</span><span class="tAV">"Epoca"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$Epoca/nome"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;p</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$Epoca/dataInicio"</span><span class="tXSLEl">/&gt;</span><span class="tT">
+            a
+            </span><span class="tXSLEl">&lt;xsl:value-of</span><span class="tAN"> select=</span><span class="tAV">"$Epoca/dataFim"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/p&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;table</span><span class="tAN"> border=</span><span class="tAV">"1"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;tr</span><span class="tEl">&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Dia</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Ano</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Unidade Curricular</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Hora</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Sala</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
+      </span><span class="tEl">&lt;td</span><span class="tEl">&gt;</span><span class="tT">Responsavel</span><span class="tEl">&lt;/td&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;/tr&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;xsl:choose</span><span class="tXSLEl">&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:when</span><span class="tAN"> test=</span><span class="tAV">"$Epoca/nome='Epoca_Especial'"</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:for-each-group</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/cursos/curso/unidades/unidade/exames/exame[epoca=$Epoca/nome]"</span><span class="tAN"> group-by=</span><span class="tAV">"Data"</span><span class="tXSLEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Data"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;tr</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"RowTemplate"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/tr&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;/xsl:for-each-group&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:when&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;xsl:otherwise</span><span class="tXSLEl">&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;xsl:for-each-group</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/cursos/curso/unidades/unidade[semestre=$Epoca/semestre]/exames/exame[epoca=$Epoca/nome]"</span><span class="tAN"> group-by=</span><span class="tAV">"Data"</span><span class="tXSLEl">&gt;</span><span class="tI">
+          </span><span class="tXSLEl">&lt;xsl:sort</span><span class="tAN"> select=</span><span class="tAV">"Data"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;tr</span><span class="tEl">&gt;</span><span class="tI">
+            </span><span class="tXSLEl">&lt;xsl:call-template</span><span class="tAN"> name=</span><span class="tAV">"RowTemplate"</span><span class="tXSLEl">/&gt;</span><span class="tI">
+          </span><span class="tEl">&lt;/tr&gt;</span><span class="tI">
+        </span><span class="tXSLEl">&lt;/xsl:for-each-group&gt;</span><span class="tI">
+      </span><span class="tXSLEl">&lt;/xsl:otherwise&gt;</span><span class="tI">
+    </span><span class="tXSLEl">&lt;/xsl:choose&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/table&gt;</span><span class="tI">
+</span><span class="tXSLEl">&lt;/xsl:template&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_SemestreS_Mapa_de_Exames.xsl"></a><div class="cmpT">Variable
+         <span class="qname">Semestre</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cTL"></td>
@@ -1068,15 +1220,254 @@
                      </tr>
                      <tr>
                         <td class="fCol">Select</td>
-                        <td>Mapa_de_Exames/calendario/epoca[nome='Epoca_Normal'and semestre ='1']</td>
+                        <td>1</td>
                      </tr>
                      <tr>
                         <td class="fCol">
                            <div class="flL">Used by</div>
-                           <div class="flR"><input id="bt_uB_V_EpocaS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_EpocaS_Mapa_de_Exames.xsl');" class="control" /></div>
+                           <div class="flR"><input id="bt_uB_V_SemestreS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_SemestreS_Mapa_de_Exames.xsl');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="uB_V_EpocaS_Mapa_de_Exames.xsl" style="display:block">
+                           <div id="uB_V_SemestreS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variables</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_Epoca_normalS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Epoca_normal</a><span class="refItemSep">;</span></div>
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_Epoca_recursoS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Epoca_recurso</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_SemestreS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_SemestreS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_SemestreS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"Semestre"</span><span class="tAN"> select=</span><span class="tAV">"1"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_Epoca_normalS_Mapa_de_Exames.xsl"></a><div class="cmpT">Variable
+         <span class="qname">Epoca_normal</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>Mapa_de_Exames/calendario/epoca[nome='Epoca_Normal'and semestre = $Semestre]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_Epoca_normalS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_Epoca_normalS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_Epoca_normalS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#M_S_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_V_Epoca_normalS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_V_Epoca_normalS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_V_Epoca_normalS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_SemestreS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Semestre</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_Epoca_normalS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_Epoca_normalS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_Epoca_normalS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"Epoca_normal"</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/calendario/epoca[nome='Epoca_Normal'and semestre = $Semestre]"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_Epoca_recursoS_Mapa_de_Exames.xsl"></a><div class="cmpT">Variable
+         <span class="qname">Epoca_recurso</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>Mapa_de_Exames/calendario/epoca[nome='Epoca_Recurso'and semestre = $Semestre]</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_Epoca_recursoS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_Epoca_recursoS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_Epoca_recursoS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Template</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#M_S_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')"><span class="mRf">/</span></a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">References</div>
+                           <div class="flR"><input id="bt_refs_V_Epoca_recursoS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('refs_V_Epoca_recursoS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="refs_V_Epoca_recursoS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="uBT">
+                                 <tr>
+                                    <td class="fCol">Variable</td>
+                                    <td>
+                                       <div class="listGrouping">
+                                          <div class="refItemBlock"><a href="Mapa_de_Exames0.html#V_SemestreS_Mapa_de_Exames.xsl" target="_self" title="No namespace" onclick="updPT('Mapa_de_Exames.xsl')">Semestre</a></div>
+                                       </div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Source</div>
+                           <div class="flR"><input id="bt_src_V_Epoca_recursoS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_Epoca_recursoS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="src_V_Epoca_recursoS_Mapa_de_Exames.xsl" style="display:block">
+                              <table class="pWCont">
+                                 <tr>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"Epoca_recurso"</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/calendario/epoca[nome='Epoca_Recurso'and semestre = $Semestre]"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lR"></td>
+         </tr>
+         <tr>
+            <td class="rt_cBL"></td>
+            <td class="rt_lB"></td>
+            <td class="rt_cBR"></td>
+         </tr>
+      </table><a id="V_Epoca_especialS_Mapa_de_Exames.xsl"></a><div class="cmpT">Variable
+         <span class="qname">Epoca_especial</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cTL"></td>
+            <td class="rt_lT"></td>
+            <td class="rt_cTR"></td>
+         </tr>
+         <tr>
+            <td class="rt_lL"></td>
+            <td class="rt_cnt">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="fCol">Namespace</td>
+                        <td>No namespace</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">Select</td>
+                        <td>Mapa_de_Exames/calendario/epoca[nome='Epoca_Especial']</td>
+                     </tr>
+                     <tr>
+                        <td class="fCol">
+                           <div class="flL">Used by</div>
+                           <div class="flR"><input id="bt_uB_V_Epoca_especialS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('uB_V_Epoca_especialS_Mapa_de_Exames.xsl');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="uB_V_Epoca_especialS_Mapa_de_Exames.xsl" style="display:block">
                               <table class="uBT">
                                  <tr>
                                     <td class="fCol">Template</td>
@@ -1093,13 +1484,13 @@
                      <tr>
                         <td class="fCol">
                            <div class="flL">Source</div>
-                           <div class="flR"><input id="bt_src_V_EpocaS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_EpocaS_Mapa_de_Exames.xsl');" class="control" /></div>
+                           <div class="flR"><input id="bt_src_V_Epoca_especialS_Mapa_de_Exames.xsl" type="image" src="img/btM.gif" value="-" onclick="switchState('src_V_Epoca_especialS_Mapa_de_Exames.xsl');" class="control" /></div>
                         </td>
                         <td>
-                           <div id="src_V_EpocaS_Mapa_de_Exames.xsl" style="display:block">
+                           <div id="src_V_Epoca_especialS_Mapa_de_Exames.xsl" style="display:block">
                               <table class="pWCont">
                                  <tr>
-                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"Epoca"</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/calendario/epoca[nome='Epoca_Normal'and semestre ='1']"</span><span class="tXSLEl">/&gt;</span></pre></td>
+                                    <td width="100%"><pre><span class="tXSLEl">&lt;xsl:variable</span><span class="tAN"> name=</span><span class="tAV">"Epoca_especial"</span><span class="tAN"> select=</span><span class="tAV">"Mapa_de_Exames/calendario/epoca[nome='Epoca_Especial']"</span><span class="tXSLEl">/&gt;</span></pre></td>
                                  </tr>
                               </table>
                            </div>

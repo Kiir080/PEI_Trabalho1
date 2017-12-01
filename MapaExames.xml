@@ -4,7 +4,6 @@
     xsi:noNamespaceSchemaLocation="XSD/MapaExames.xsd">
 
     <calendario>
-        
         <epoca>
             <semestre>1</semestre>
             <nome>Epoca_Normal</nome>
